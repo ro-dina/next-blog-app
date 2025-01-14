@@ -76,8 +76,10 @@ const AdminPostSummary: React.FC<Props> = (props) => {
       </div>
 
       {/* タイトルと三点リーダーの位置調整 */}
-      <div className="flex items-center justify-between mt-2">
-        <div className="font-bold">{post.title}</div>
+      <div className="mt-2 flex items-center justify-between">
+        <Link href={`/posts/${post.id}`} className="font-bold">
+          {post.title}
+        </Link>
         {/* 三点リーダー */}
         <button
           type="button"
@@ -90,12 +92,12 @@ const AdminPostSummary: React.FC<Props> = (props) => {
 
       {/* メニュー表示 */}
       {isMenuOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg border border-slate-200 rounded-md">
-          <div className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <div className="absolute right-0 mt-2 w-48 rounded-md border border-slate-200 bg-white shadow-lg">
+          <div className="cursor-pointer px-4 py-2 hover:bg-gray-100">
             <Link href={`/admin/posts/${post.id}`}>編集</Link>
           </div>
           <div
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-600"
+            className="cursor-pointer px-4 py-2 text-red-600 hover:bg-gray-100"
             onClick={() => handleDelete(post)}
           >
             削除
