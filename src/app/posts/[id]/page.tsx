@@ -9,6 +9,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 import DOMPurify from "isomorphic-dompurify";
+import Link from "next/link";
 
 // 投稿記事の詳細表示 /posts/[id]
 const Page: React.FC = () => {
@@ -97,6 +98,14 @@ const Page: React.FC = () => {
           />
         </div>
         <div dangerouslySetInnerHTML={{ __html: safeHTML }} />
+      </div>
+
+      <div className="mt-4">
+        <Link href="/admin/posts">
+          <button className="rounded-md bg-indigo-500 px-4 py-2 text-white hover:bg-indigo-600">
+            戻る
+          </button>
+        </Link>
       </div>
     </main>
   );
