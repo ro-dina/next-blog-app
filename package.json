@@ -19,6 +19,7 @@
     "@prisma/client": "^6.2.1",
     "@supabase/supabase-js": "^2.47.12",
     "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
     "dompurify": "^3.2.3",
     "isomorphic-dompurify": "^2.19.0",
     "next": "14.2.18",
